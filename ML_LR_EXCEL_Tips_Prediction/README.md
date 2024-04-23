@@ -32,6 +32,7 @@
 
   - *Note: All column values above sum up to 244*
 
+
 ### Find out the measures that are independent and dependent
   - Independent variables = sex, smoker, day, time, size, total_bill
   - dependent variable = tip
