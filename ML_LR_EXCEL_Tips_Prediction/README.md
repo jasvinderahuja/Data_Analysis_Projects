@@ -16,44 +16,47 @@
 ## Tasks - 
 
 ### Use the restaurant tips file for the analytics using Excel
- - see attached excel file called "RestaurantTipsDataset_JasvinderAhuja.xlsx"
+ - see the attached Excel file called "RestaurantTipsDataset_JasvinderAhuja.xlsx"
  - Glimpse of the data in sheet = tips_original
 ![Glimpse of the data in sheet = tips_original](Data_glimpse.png)  
 
 ### Find out if there are any missing values and clean the data
   - total values are = 244
-  - First (on sheet=tips_EDA) I got unique values for each column into the I column using: Data > Advanced > Select List > Copy Unique Values To > "cell for unique values"; where I14="Female"
+  - First (on sheet=tips_EDA), I got unique values for each column into the I column using: Data > Advanced > Select List > Copy Unique Values To > "cell for unique values"; where I14="Female"
   - Then I counted the unique values using 
 ```
       =COUNTIF(A:A,I14)
 ```
-  - There were no missing values and exploratory data analysis (EDA) for the values is as follows-
+  - There were no missing values, and exploratory data analysis (EDA) for the values is as follows-
 ![Exploratory Data Analysis Plots](ValuesAnalysis.png)
-  - *Note: All column values above sum up-to 244*
+
+  - *Note: All column values above sum up to 244*
 
 ### Find out the measures that are independent and dependent
   - Independent variables = sex, smoker, day, time, size, total_bill
   - dependent variable = tip
-  - Note: tip seems to increse with total_bill and with size in above EDA
-  - We will need to code and model sex, smoker, day and time for further analysis
+  - Note: tip seems to increase with total_bill and with size in above EDA
+  - We will need to code and model sex, smoker, day, and time for further analysis
 
 ### Identify which predictive problem is needed
-  - We need multiple regression to predict tips as there are at least 2 variable that seem to affect tips (total_bill and size)
-  - For categorical variables (gender, smoker, meal and day) we dont see any distinct pattern but we may be missing it or it may be acting as a compounding factor with some other variable. 
+  - We need multiple regression to predict tips as there are at least 2 variables that seem to affect tips (total_bill and size)
+  - For categorical variables (gender, smoker, meal and day) we dont see any distinct pattern, but we may be missing it or it may be acting as a compounding factor with some other variable. 
   - So for the first round of predictive analysis we will use all the variables.
 
 ### Encode the categorical variables to numeric using IF conditions
   - I inserted "tip" column before size to separate the dependent variable from independent variable inputs. So that the independent variables (coded) can be fed to the analysis as a contiguous range in the next section.
   - **Gender, Smoker and Meal have only two categories therefore will be coded as 0 or 1
-  - ** Day of the Week has four catogories therefore needs to be coded into four columns using one-hot encoding. **
+  - ** Day of the Week has four categories; therefore, it must be coded into four columns using one-hot encoding. **
   - let me explain. 
-      - If we code as 0,1,2,3 for Thur, Fri, Sat and Sun; then whatever coefficient (m~d~) we get will need to be linearly correlated to day!!! for example if coeff = m~d~ then it becomes = 0+Fri\*m~d~+Sat\*2m~d~+Sun\*3m~d~
+      - If we code as 0,1,2,3 for Thur, Fri, Sat and Sun, then whatever coefficient (m~d~) we get will need to be linearly correlated to day!!! for example if coeff = m~d~ then it becomes = 0+Fri\*m~d~+Sat\*2m~d~+Sun\*3m~d~
       - Instead we need = Thu\*m~Thu~ + Fri\*m~Fri~+Sat\*m~Sat~+Sun\*m~Sun~ 
+
 _Note: one of these variables we created for day is dependent on all other variables. e.g. if we know that a day is not Thursday, Friday or Saturday - It has to be Sunday! _       
 
   - I manually typed - J1=Thur, K1=Fri, L1=Sat and M1=Sun. In this setup only one of these four columns would be 1 and others would be set to 0.
   - Here are the formula for coding using if (refer sheet = tip_encoding)  
-     _I like to encode both options with IFS to be sure_
+
+_I like to encode both options with IFS to be sure_
 
 
 ```
@@ -65,7 +68,7 @@ L2 = IF($C2=L$1,1,0)
 M2 = IF($C2=M$1,1,0)
 N2 = IFS(D2="Lunch",0,D2="Dinner",1)
 ```
- - another concern was whether to get a zscore for total_bill and size. $$Z = (X - μ) / σ $$ Doing this did not improve the model (not shown) and complicated the analysis in excel for this task. Therefore, I went without scaling the values. _Please share if anyone has strong contrary opinions on this aspect._
+ - another concern was whether to get a z-score for total_bill and size. $$Z = (X - μ) / σ $$ Doing this did not improve the model (not shown) and complicated the analysis in excel for this task. Therefore, I went without scaling the values. _Please share if anyone has strong contrary opinions on this aspect._
  - Glimpse of encoded values 
 ![Encoded values](EncodedValues.png)
 
