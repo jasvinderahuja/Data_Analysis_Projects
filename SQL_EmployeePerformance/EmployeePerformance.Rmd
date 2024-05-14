@@ -1,5 +1,5 @@
 ---
-title: "SQL_EmployeeRecords"
+title: "SQL EmployeeRecords"
 author: "Jas Ahuja"
 date: "`r Sys.Date()`"
 output:
@@ -17,6 +17,13 @@ output:
     toc_depth: 3
 email: jasvinderahuja@gmail.com
 ---
+## Introduction
+
+I am mostly self-taught or taught many years ago.
+
+So I am refreshing and documenting my skills in a systematic manner and this SQL course is a part of that attempt. It covers most use cases for a non data engineer, where data retrieval is inolved. In future, I plan to add better explanations and more material. Stay tuned! 
+
+_need to add Introductory chapter and joins_
 
 _css chunk to make tables fit_
 
