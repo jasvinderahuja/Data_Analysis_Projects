@@ -29,9 +29,6 @@ td{font-size: 12px;}
 ```
 
 _Hidden code chunk for mypassword_
-```{r password, echo=FALSE, include=FALSE, comment = NA, message = FALSE, warning = FALSE }
-mypassword="Rconnect1"
-```
 
 _Make a MySQL connection from Rmarkdown_
 
