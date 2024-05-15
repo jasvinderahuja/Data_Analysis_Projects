@@ -29,7 +29,9 @@
 ```
   - There were no missing values, and exploratory data analysis (EDA) for the values is as follows-
 ![Exploratory Data Analysis Plots](ValuesAnalysis.png)
+
   - *Note: All column values above sum up to 244*
+
 
 ### Find out the measures that are independent and dependent
   - Independent variables = sex, smoker, day, time, size, total_bill
@@ -49,10 +51,13 @@
   - let me explain. 
       - If we code as 0,1,2,3 for Thur, Fri, Sat and Sun, then whatever coefficient (m~d~) we get will need to be linearly correlated to day!!! for example if coeff = m~d~ then it becomes = 0+Fri\*m~d~+Sat\*2m~d~+Sun\*3m~d~
       - Instead we need = Thu\*m~Thu~ + Fri\*m~Fri~+Sat\*m~Sat~+Sun\*m~Sun~ 
-_Note: one of these variables we created for day is dependent on all other variables. e.g., if we know that a day is not Thursday, Friday or Saturday - It has to be Sunday! _       
-  - I manually typed - J1=Thur, K1=Fri, L1=Sat and M1=Sun. In this setup, only one of these four columns would be 1, and others would be set to 0.
-  - Here is the formula for coding using if (refer sheet = tip_encoding)  
-     _I like to encode both options with IFS to be sure_
+
+_Note: one of these variables we created for day is dependent on all other variables. e.g. if we know that a day is not Thursday, Friday or Saturday - It has to be Sunday! _       
+
+  - I manually typed - J1=Thur, K1=Fri, L1=Sat and M1=Sun. In this setup only one of these four columns would be 1 and others would be set to 0.
+  - Here are the formula for coding using if (refer sheet = tip_encoding)  
+
+_I like to encode both options with IFS to be sure_
 
 
 ```
