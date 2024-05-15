@@ -1,22 +1,8 @@
----
-title: "SQL EmployeeRecords"
-author: "Jas Ahuja"
-date: "2024-05-14"
-output:
-  html_document:
-    keep_md: yes
-    code_folding: show
-    toc: true
-    toc_depth: 3
-    toc_float: true
-    theme: readable
-    css: style.css
-  pdf_document:
-    extra_dependencies: ["adjustbox"]
-    toc: true
-    toc_depth: 3
-email: jasvinderahuja@gmail.com
----
+# Project: Use SQL for EmployeeRecords
+- author: "Jas Ahuja"
+- date: "2024-05-14"
+- email: jasvinderahuja@gmail.com
+
 ## Introduction
 
 I am mostly self-taught or taught many years ago.
@@ -27,16 +13,7 @@ _need to add Introductory chapter and joins_
 
 _css chunk to make tables fit_
 
-<style type="text/css">
-#TOC {
-  margin: 3px 0px 3px 3px;
-}
-
-td{font-size: 12px;}
-</style>
-
 _Hidden code chunk for mypassword_
-
 
 _Make a MySQL connection from Rmarkdown_
 
