@@ -6,7 +6,7 @@
 - Result: __tip = 0.8465 + size\*0.1760 + total_bill\*0.0945__  
 ![Result](ML_LR_EXCEL_Tips_Prediction/ResultAnalysis.png)  
 
-# [Electricity Demand forecasting](ElectricityDemandEstimation/DemandEstimation.md)
+# [Electricity Demand forecasting](ElectricityDemandEstimation/Readme.md)
 __Aim: We need to forecast the next 24 months' demand__  
 
 - Step-1. EDA (there are no nulls :))   
