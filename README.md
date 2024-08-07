@@ -6,11 +6,26 @@
 - Result: __tip = 0.8465 + size\*0.1760 + total_bill\*0.0945__  
 ![Result](ML_LR_EXCEL_Tips_Prediction/ResultAnalysis.png)  
 
-## [Practice SQL commands using an Employee Records database](SQL_EmployeePerformance/README.md)
-- Objective: To document various kinds of SQL queries
-- Importance: SQL is a very impactful and ubiquitous database query language. 
-- It is a very reliable way to store data. We used MySQL here
-- Data retrieval is lightning fast! For example, in the recent [1 billion row challenge](https://www.morling.dev/blog/one-billion-row-challenge/), although JAVA was the method of choice in programming (with Python being ways behind :( and R was not even in question. [SQL was impressive, and the query time was nothing less than stellar](https://rmoff.net/2024/01/03/1%EF%B8%8F%E2%83%A3%EF%B8%8F-1brc-in-sql-with-duckdb/)  
+# [Electricity Demand forecasting](ElectricityDemandEstimation/DemandEstimation.md)
+__Aim: We need to forecast the next 24 months' demand__  
 
-_Todo: I need to add an intro to SQL, more commands importantly intro to joins, and my attempt on one-billion-row challenge using R(dplyr and parallels), and Python(numpy, hashing and multithreading) to see how my methods compare._
+- Step-1. EDA (there are no nulls :))   
+1. Data has an increasing trend (Figure-1)  
+2. Monthly data is given to us (Figure-2)  
+3. DF test: model is not stationary (EDA table-1)  
+4. Multiplicative decomposition works best and decomposes into trend, seasonality and residuals (Figure-3 and Figure-4)  
+5. Autocorrelation function (ACF, Figure-5) shows seasonality and tells us that after a lag of 2 years data has an insignificant effect on present.  
+6. Partial Autocorrelation function (PACF, Figure-6) also highlights seasonality  
+
+Step-2: Modeling  
+__How I see it is that__
+- I will use data(-24 months) to fit and predict the last 24 months for which we do have data.  
+- Then with the best model, I will create a new fit with all given data using the parameters that best predicted the last 24 months
+
+7. ExponentialSmoothing
+8. SARIMA using guestimate based on EDA
+9. auto_SARIMA to automatically identify parameters (_hint: best performance_; Figure-7)
+10. Prophet by Facebook, worthy competitor
+
+![Highlights](ElectricityDemandEstimation/pngs/DemandEstimation.png)
 
