@@ -22,7 +22,7 @@ __How I see it is that__
 10. Prophet by Facebook, worthy competitor
 
 ![Highlights](pngs/DemandEstimation.png)
-
+_I need to follow - https://medium.com/@Games24x7Tech/how-we-tackled-fb-prophets-monthly-seasonality-issue-8cf042e84026 and fix seasonality issue. I certainly have similar problem with my prophet implementation_
 ```python
 import numpy as np
 import pandas as pd
