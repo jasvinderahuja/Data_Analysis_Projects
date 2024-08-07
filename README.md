@@ -7,7 +7,6 @@
 ![Result](ML_LR_EXCEL_Tips_Prediction/ResultAnalysis.png)  
 
 # [Electricity Demand forecasting](ElectricityDemandEstimation/DemandEstimation.md)
- 
 __Aim: We need to forecast the next 24 months' demand__  
 
 - Step-1. EDA (there are no nulls :))   
