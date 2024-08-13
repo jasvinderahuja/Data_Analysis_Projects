@@ -8,7 +8,7 @@
 
 
 # [Electricity Demand forecasting](electricity_demand_estimation/Readme.md)
-![Result](electricity_demand_estimation/DemandEstimation.png) 
+![Result](electricity_demand_estimation/pngs/DemandEstimation.png) 
 __Aim: We need to forecast the next 24 months' demand__  
 
 - Step-1. EDA (there are no nulls :))   
