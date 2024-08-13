@@ -6,7 +6,9 @@
 - Result: __tip = 0.8465 + size\*0.1760 + total_bill\*0.0945__  
 ![Result](ML_LR_EXCEL_Tips_Prediction/ResultAnalysis.png)  
 
-# [Electricity Demand forecasting](ElectricityDemandEstimation/Readme.md)
+
+# [Electricity Demand forecasting](electricity_demand_estimation/DemandEstimation.md)
+
 __Aim: We need to forecast the next 24 months' demand__  
 
 - Step-1. EDA (there are no nulls :))   
@@ -28,4 +30,8 @@ __How I see it is that__
 10. Prophet by Facebook, worthy competitor
 
 ![Highlights](ElectricityDemandEstimation/pngs/DemandEstimation.png)
+
+# [Marketing and Ecommerce](marketing_ecommerce/MarketingECommerce.ipynb)
+# [cyber security](cyber_security/CyberSecurity.ipynb)
+# [Predict Credit Card Consumption](predict_credit_card_consumption/)
 
