@@ -8,7 +8,6 @@
 
 
 # [Electricity Demand forecasting](electricity_demand_estimation/Readme.md)
-![Result](electricity_demand_estimation/pngs/DemandEstimation.png) 
 __Aim: We need to forecast the next 24 months' demand__  
 
 - Step-1. EDA (there are no nulls :))   
@@ -27,11 +26,11 @@ __How I see it is that__
 7. ExponentialSmoothing
 8. SARIMA using guestimate based on EDA
 9. auto_SARIMA to automatically identify parameters (_hint: best performance_; Figure-7)
-10. Prophet by Facebook, worthy competitor
+10. Prophet by Facebook, worthy competitor (need to understand the seasonality function better for this one.)
 
-![Highlights](ElectricityDemandEstimation/pngs/DemandEstimation.png)
+![Highlights](electricity_demand_estimation/pngs/DemandEstimation.png)
 
 # [Marketing and Ecommerce](marketing_ecommerce/MarketingECommerce.ipynb)
-# [cyber security](cyber_security/CyberSecurity.ipynb)
+# [Cyber Security](cyber_security/CyberSecurity.ipynb)
 # [Predict Credit Card Consumption](predict_credit_card_consumption/)
 
